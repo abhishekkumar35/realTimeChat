@@ -12,9 +12,11 @@
     <input type="text" id="chat-input" placeholder="Type your message here...">
     <button id="chat-send" onclick="sendMessage()">Send</button>
   </div>
+  <!-- including socket.io.js file from node_modules development build -->
+  <script src="socket.io/socket.io.js"></script>
   <script>
     // Connect to the server
-    var socket = io('http://localhost:5500');
+    var socket = io();
 
     // Send a message when the send button is clicked
     function sendMessage() {
