@@ -22,11 +22,9 @@ io.on('connection', (socket) => {
 });
 // const networkUrl = os.networkInterfaces().en0;
 
-app.get('/1', (req, res) => {
-    res.sendFile('./chat.html',{root:__dirname});
-})
+
 app.get('/', (req, res) => {
-  res.sendFile('./chat2.html',{root:__dirname});
+  res.sendFile('./chat.html',{root:__dirname});
 })
 http.listen(5500, () => {
   console.log('Server listening on port 5500');
